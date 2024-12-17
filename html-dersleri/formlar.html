@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML İLE FORMLAR</title>
+</head>
+<body>
+<form action="action.php"> 
+	
+<label for="isim">Ad:</label>
+<input type="text" name="isim" id="isim" placeholder="Adınızı Giriniz">
+<br><br>
+
+<label for="soyisim">Soyadınız:</label>
+<input type="text" name="soyisim" id="soyisim" placeholder="Soyadınızı Giriniz">
+<br><br>
+
+<label for="eposta">E-Posta Adresiniz:</label>
+<input type="email" name="eposta" id="eposta" placeholder="E-Postanızı Giriniz">
+<br><br>
+
+<label for="sifre">Şifre:</label>
+<input type="password" name="sifre" id="sifre" placeholder="Şifre Giriniz" maxlength="10" required>
+<br><br>
+
+<label for="telefon">Telefon:</label>
+<input type="tel" name="telefon" id="telefon" placeholder="Telefon Numaranız">
+<br><br>
+
+<label for="tarih">Doğum Tarihi:</label>
+<input type="date" name="tarih" id="tarih" placeholder="Doğum Tarihiniz">
+<br><br>
+
+<label for="kardes">Kardeş Sayınız:</label>
+<input type="number" name="kardes" id="kardes" min="0" max="10">
+<br><br>
+
+<label for="cinsiyet">Cinsiyetinizi Seçiniz:</label>
+
+<label for="kadın">Kadın</label>
+<input type="radio" name="cinsiyet" id="kadın" value="kadın">
+
+<label for="erkek">Erkek</label>
+<input type="radio" name="cinsiyet" id="erkek" value="erkek">
+<br><br>
+
+<select name="" id="">
+	<option value="ssk">SSK</option>
+	<option value="bagkur">BAĞKUR</option>
+	<option value="emekli">EMEKLİ SANDIĞI</option>
+</select>
+<br><br>
+
+<label for="">Aktif Olarak Çalışıyor</label>
+<input type="checkbox">
+<br><br>
+
+<textarea name="" id="" cols="20" rows="5"></textarea>
+<br><br>
+
+<input type="file" accept=".pdf">
+<br><br>
+
+<input type="reset">
+<input type="submit"> 
+  </form>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+<!--bu derste html de form oluşturmayı öğrenicez. formlar kullanıcıdan belli verileri çekmek için kullanılır. mesela facebook'a kayıt olurken karşımıza çıkan bir formu örnek olarak görebiliriz.
+form oluşturmak için ilk olarak "form" etiketimizi yazıyoruz. bu derste bir sigorta şirketine web sayfası yaptıgımızı düşünelim ve bu web sayfasında kullanıcının neredeyse bütün verilerini toplayacağız. bunun için input etiketini kullanıyoruz.
+
+karşıma 3 tane parametre ve bir tane de kutu çıktı. bu kutuya herhangi bir yazı yazabiliyorum.
+öncelikle parametrelerden bahsedelim.
+"type" parametresi; kullanıcıdan çekmek istediğimiz değerin cinsini yazıyorum. mesela burada text yazılı olduğu için bir yazı yazabiliyorum bunun içine. 
+
+Eğer kullanıcıdan farklı türde bir veri çekmek istiyorsam, buradaki type'ı değiştirmem gerekiyor. bu derste neredeyse bütün input typlarını görücez.
+
+ilk olarak kullanıcımın ismini öğrenmek istiyorum burada text değerine ellemiyorum. fakat kullanıcımın ismini yazabilmesi için bu kutuya bir isim girmem gerekiyor. bunun içinde "label" etiketini kullanıyoruz bu label etiketini içine Ad: yazıcam.
+
+sıra geldi diğer parametrelere; id paremetresini buradaki kutumuza bir tane isim veriyoruz mesela burada isim depoladığımız için buradaki kutuya "isim" diyorum id'sine.
+
+ve buradaki labelı bu kutuya bağlamak için buradaki for etiketinin için inputumuzun id'sini giriyorum burada ben isim yazarsam for'a buradaki label ve buradaki kutu birbirine bağlanmış oluyor.
+yani artık burada gelip tıkladığımda da buradaki kutu açılmış oluyor. 
+
+name parametresinde de burada inputa yazdığımız değerin hangi isimle kaydolacağını yazıyoruz. yani bir nevi değişken tanımlıyorz gibi düşünebilirsiniz. 
+buradaki isim için bu değişkenime de isim adını veriyorum. bu name'i ilerde nasıl kullanacağımıız göstereceğim
+
+bir başka paremetremizde placeholder parametresi burada örnek bir metin yazmamızı sağlıyor eğer kullanıcı gelip burada ismini yazarsa buradaki placeholder yazısı siliniyor.
+
+şimdi bunun altına bir tanede soyad bölümü yapıcam. tıpkı isimde yaptığım gibi kullanıcın soyadını girmesi içinde bir tane soyad bölümü oluşturdum fakat gördüğünüz gibi bunlar yan yana yazıldı bunu engellemek için bunların arasında iki tane br koyuyorum 
+
+bu derste sadece html öğrendiğimiz için backend oluştumaktan bahsetmeyeceğim fakat kısaca bahsetmek gerekirse websitelerin arka planından oluşan pyton php gibi dillerle yazılmış oluyor kodlar oluyor. 
+mesela bizim action.php adında bir backend dosyamız olsun backend dosyamızıda action parametresine yazıyorum.
+ben göndere bastığım anda bunların içindeki veriler action.php dosyasına gönderilecek.
+
+bir kutunun doldurulmasını zorunlu yapmak istiyorsam "required" parametresini kullanıyoruz. bunu yaptıktan sonra artık kullanıcı buradaki değerlerin hepsini girmeden göndere basarsa burada bir uyarı çıkıyor.
+
+şimdi kullanıcıdan şifre alalım: şifre almak için özel bir input türümüz var adında "password" bunu farklı yapan yazarken gizlenmesi ona da placeholder ekleyelim (****)
+
+burada kullanıcı isterse 100 haneli bir şifre girebilir, bunu sınırlamak için maxlength parametresini kullanıyoruz. 
+
+mesela ben kullanıcımım max. 10 karakterli şifre girmesini istiyoruz dolayısyla 10 yazdım buraya
+
+şimdi kullanıcımızın eposta adresini alıyoruz. bunun içinde özel bir input type'ımız var. adıda "email" amacıda eğer kullanıcı buraya eposta olmayan bir değer girerse e göndere basarsa uyarı veriyor.
+
+şimdi kullanıcımızın telefon numarasını öğrenelim placeholder'a telefon numaranızı giriniz yazıyorum. bunun içinde özel bir input türümüz var "tel"
+
+kullanıcımızın doğum tarihini öğrenmek istiyorsam input taypına "date" yazıyorum.
+
+bir sigorta şirketi olduğum için kullanıcımın kardeş sayısınıda öğrenmek istiyorum. kullanıcıdan bir sayı istiyorsam da type değerine number yazıyorum, bununda özelliği kullanıcın okları kullanabilmesi lakiin burada kullanıcı eksili değer verebilir bu benim istediğim cevap değil bunuda engelleyebilirim bunun için min ve max parametrelerini kullanıyoruz, sıfırdan daha az kardeşi olamayacağı için min değerine 0 maxa'da 30 verdim.
+
+kullanıcımın cinsiyetini öğrenmek istersem; burada radio butonlarını kullanıcam; radio butonlarında eğer name kısımlarının ikisine de aynı şeyi girerseniz mesela burada ikisine de cinsiyet yazıyorum bu ikisi aynı kategoride olacağında ikisini de seçebiliriz. 
+eğer namelere farklı şeyler girerseniz de ikisini de birden seçebiliyorsunuz. burada bir insanın bir cinsiyeti vardır diye düşünüp aynı değerleir veriyoruz. 
+
+başınada kadın ve erkek olduğu anlaşılsın diye yine label kullanıcam
+
+bunlarında label'ı ile radio butonunu bağlamak istiyorum. bunun için kadın butonunun id'sine kadın labelin foruna kadın yazıyorum aynı şeyi erkeğe de yapıyorum. artık kullanıcı kadın veya erkek yazısına basarakta seçim yapabiliyor.
+
+şimdi kullanıcın cinsiyetini öğrendik fakat bunu backendime göndermedim backend koduna göndereceğimiz değeri "value" parametresinin içine yazıyoruz kadına kadın erkeğe erkek yazdım.
+
+böylece kullanıcı gelip cinsiyetini seçtiğinde o cinsiyetin bilgisi backend kodumuza bildirilmiş olacak.
+
+bir başka input türümüz aşağı açılır menü: bunu yapmak için "select" etiketini kullanıyoruz açılan menüden seçenekleri yazmak içinde "option" etiketini kullanıyoruz.
+
+ben burada kullanıcıya hangi sigorta şirketine üye olduğunu sorucam bunun için 3 tane option yazıyorum.
+
+ilk olarak SSK-BAĞKUR-EMEKLİ olabilir dedim. aynı şekilde bunlarında backend kodumuza değer göndermesini istiyorsak value değerlerinin icine yazıyoruz.
+
+diğer input türümüz CHECKBOX bunuda oluşturmak için type değerine checkbox yazıyorum. burada da çalışıp çalışmadıgını öğrenelim
+
+kullanıcıdan uzun bir metin almak istiyorsam da "textarea" etiketini kullanıyorum. bu etiket. bu kutunun boyutunu ayarlamak istiyorsak burada "cols" ve "rows" iki parametresi var. cols sütun(genişlik) rows da (yükseklik) satır. 
+
+son olarak dosya yüklemesini isteyelim kullanıcımdan; type değerine "file" yazıyoruz böylece dosya seç'e basınca istediği dosyayı websitemize yükleyebilir.
+
+burada adli sicil kaydını isteyelim, burada istediği dosyayı seçebilir lakin PDF olmalı sicil kaydı bunuda belirtmek istiyorum. burada accept parametresini kullanıyorum burada .dpf yazıyorum ve kullanıcıyı sınırlıyorum.
+
+şimdi butonlara geçelim ilk göreceğimiz buton reset butonu bunu oluşturmak için input yazdıktan sonra şu diğer praametrelere ihtiyacımız yok. 
+1-reset butonunu anlat
+2-gönder butonunu anlat yazdıgımız değerleri websitemizin backendine göndermeye yarıyor.
+-->

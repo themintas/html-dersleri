@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML İLE TABLO</title>
+</head>
+<body>
+	<h3 align="center">Market Açılış Saatleri</h3>
+	<table bgcolor="black">
+	<tr bgcolor="pink" width= "560">
+			<th width="80">Pazartesi</th>
+			<th width="80">Salı</th>
+			<th width="80">Çarşamba</th>
+			<th width="80">Perşembe</th>
+			<th width="80">Cuma</th>
+			<th width="80">Cumartesi</th>
+			<th width="80">Pazar</th>
+	</tr>
+<tr style="background-color: slategrey; text-align: center;">
+	<td>8-7</td>
+	<td>8-7</td>
+	<td>8-7</td>
+	<td>8-7</td>
+	<td>8-7</td>
+	<td>KAPALI</td>
+	<td>KAPALI</td>
+   </tr>
+  </table>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--market için web sitesi yaptıgımızı düşünelim bu marketin açılış ve kapanış saatlerini belirlemek için bu derste bir tablo yapacağız.
+
+tabloyu oluşturmak için table etiketimizi yazıyoruz. bu etiketin içine tablomuzun kaç satırdan oluşmasını istiyorsak o kadar tr etiketi yazıyoruz. tr tablerow'un kısaltmasıdır. yani tablo satırı anlamına geliyor.
+bu tablomuz iki satırdan oluşacak birinci satıra haftanın günlerini ikinci satırada o günlerde hangi saatlerde açılığp hangi saatlerde kapandıgını yazacağız. iki satırdan oluşacağı için iki tane tr etiketi açıyorum. 
+
+ilk satıra haftanın günleri bu elemanları da th etiketinde yazıyorum. buralarada haftanın günlerini sıralıyorum. lakin bakalım tablodan ziyade metin gibi yan yana yazdı bunu ilerleyen zamanlarda çok kolay düzelteceğiz. şimdi ikinci satıra kaçta açılıp kaçta kapandığını yazacağız bizim mağazamız pzartesi günleri 10da açık pazar günleri 12de açılacaktı. bu bilgileri yazmak için ikinci tr etiketimize yani ikinci satırımıza td etiketinin içinde yazacağız. yedi günüm oldugu için yedi tanede td etiketine ihtiyacım var o yüzden kopyalayıp yapıştırdım. pazartesi birinciye salı ikinciye denk gelecek şekilde td etiketlerini dolduruyorum. böylece ana hatlarını tablomun belirlemiş oldum. ikinci satırımı ortalamak istiyorum. bunun için ikinci tr etiketime gelip "align" parametresini center yapacağım gördüğünüz gibi bütün elemanlarım ortalandı.
+
+ve artık tablo görünümüne sahip olmasını istiyorum. ilk satırımın gri olmasını istiyorum. ilk tr etiketime gelip "bgcolor" parametresini kullanarak renk vereceğim. ikinciyede açıkgri ekledim ve artık tabloma kenarlık ekleyebilirim, table etiketine bgcolor siyah verdim. böylece artık gerçek bir tablo oldu. 
+
+Son olarak bütün hücrelerin boyutunu eşit büyüklükte yer kaplatacağım. pazartesi de salıda eşit büyüklüğe sahip olsun diye th etiketlerinin hepsine genişlik anlamına gelen width parametresini verecğim. değişti ama ya da değilmezse; tablomun genişliğini değiştirmem lazım table etiketime tüm 80lerin toplamını vereceğim
+
+son bir tekrar yapacak olursak; tablo oluşturmak için table etiketini açıyoruz sonra yapmak istediğimiz satır sayısı kadar tr etiketi açıyoruz ve sutün sayısı kadar da th etiketinin içine tablomuzun başlık elemanlarını yazıyoruz, başlık elemanlarımız haftanın günleriydi. td etikeletinin içine de başlık elemanlarının bugünlerde ne zaman açılıp ne zaman kapandığıydı-->

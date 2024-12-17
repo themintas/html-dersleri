@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BUTON EKLEME</title>
+</head>
+<body>
+
+<button onclick="tikla()" style="background-color: blueviolet; color: aliceblue; border-radius: 10px;">Tıkla</button>
+
+<p id="yazi">Butona Bas!</p>
+<script>
+function tikla()
+{
+document.getElementById('yazi').innerHTML="Butona Bastınız"
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- buton eklemek için button etiketini kullanıyorum. button etiketlerinin arasına tıkla yazdım gördüğünüz gibi bir şey olmadı.
+
+diyelim ki bir web sitesine gitmek istiyorum hyperlinke dönüştürmeliyim.
+
+a etiketi kullanarak buton etiketinin etrafına yapıştırıyorum. yani buton etiketimi a'nın içine yazıyorum. google gittim. 
+
+bu butonu kullanıma kapatmak istersem buton etiketinin içine "dissable" parametresini kullanıyorum ve bunu kaldırıyorum.
+
+butonum çok güzel çalışıyor fakat daha güzel görünsün istiyorum. bunun için css kodu kullanacağım style yani
+
+daha oval yuvarlak kenarlara sahip olması için; border-radius
+
+butonumuz çalışıyor link verdik siteye gitti daha fazla özellik vermek için javascript kullanacağım bu derste çok küçük javascrip kullanacağız.
+------------------------------------
+ilk olarak bir p etiketinin içine "butona bas" yazacağız. butonumun dısındaki a etiketini siliyorum cunku butonumun bir hyperlink olmasını istemiyorum.
+ve ben butona bastıgımda buradaki yazının "butona bastınız" olarak değişmesini istiyorum. bunun için js kullanacağız
+---
+js kodu yazmak için "script" elementini kullanıyoruz artık buraya js kodu yazabilirim fonksiyon eklemek istiyorum "function" keywordünü yazıyorum
+
+ve bundan sonra fonksiyonuma bir isim vermem gerekiyor ben burada "tıkla" diye bir isim vereceğim
+fakat türkçe karakter kullanmamaya çalışıyorum cunku bazen hata verebiliyor sonra "tikla()"" ve "süslü parantez" koyuyoruz.
+
+artık ben bu tıkla fonk. tanımlamıs oldum ve ben burada butona her tıkladıgımda bu fonk çalışsın istiyorum.
+---------------------
+bunun için özel bir parametremiz var buton içine yazdıgımız "onclick" parametresi, bu parametrenin içine fonksiyonumuzun ismini yazıyoruz benim burada fonk. ismi "tikla()"
+
+fakat gördüğünüz gibi açmakapama paranteziyle birlikte yapıştırıyorum unutmayın bunu.
+------
+butona tıkladığımda p etiketinin içindeki yazının değişmesini istiyordum fakat bunun için ilk olarak p etiketime bir id vermem gerekiyor bu p etiketini diğerlerinden ayırmam lazım burada yazi vericem tr karakter kullanmadan
+
+bunu yazdıktan sonra artık yazımı değiştirebilirim, bunu yapmak için "document.getElementById" fonk tanımlıyorum. bunlar önceden tanımlı fonksiyonlar oldugu için hepsini bilmenize gerek yok zaten bir süre sonra ezberlersiniz.
+bunun sonrasında parentez açıp tırnak açtım elementimin id'sini yazıyorum benim elementimin adı yazi
+sonrasında innerHTML="Butona Bastınız" yazıyorum.
+
+
